@@ -9,8 +9,11 @@ public class Main {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
-        Vehicle vehicle = (Vehicle) context.getBean("car");
-        vehicle.drive();
+        Vehicle vehicle1 = (Vehicle) context.getBean("car");
+        vehicle1.drive();
+
+        Vehicle vehicle2 = (Vehicle) context.getBean("truck");
+        vehicle2.drive();
 
         Tire tire = (Tire) context.getBean("tire");
         System.out.println(tire);
